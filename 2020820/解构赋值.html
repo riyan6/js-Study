@@ -1,0 +1,31 @@
+<script>
+
+    const person = {
+        name: '米虎子',
+        age: 21,
+        city: '杭州',
+        company: {
+            // companyNo: '007',
+            companyName: '辉煌软件'
+        }
+    }
+
+    // param: xxx 重命名
+    // companyNo 如果对象有这个值就取这个值，如果没有 007 就是默认值
+
+    const { name: personName , company: { companyName: cName, companyNo = '007' } } = person
+    console.log('name:' + personName + ',companyName:' + cName + ',companyNo:' + companyNo)
+
+    // =========================================================== 数组的结构复制 ↓
+
+    const personArr = ["米小虎", "男", 20]
+    const [ stuName, stuSex, stuAge ] = personArr
+    console.log(stuName, stuSex, stuAge)
+
+    // 交换数据
+    let a = 1;
+    let b = -1;
+    [a, b] = [b, a];
+    console.log(a, b)
+
+</script>

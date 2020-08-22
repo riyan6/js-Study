@@ -1,0 +1,40 @@
+<script>
+
+    // ES5 数组方法
+    // map foreach filter reduce some every includes
+
+    const numbers = [7, 5, 1, 6, 9, 2]
+    const ages = [11, 22, 19, 15, 16, 20]
+    const saly = [1000, 2000, 500, 2500, 1000]
+
+    // map() 遍历每一个元素，可以对每一个元素进行装饰，返回一个新数组
+    const map = numbers.map((item) => {
+        return item + 1
+    })
+    console.log(map)
+
+    // foreach() 遍历每一个元素 对原数组进行操作，单纯的方法
+
+    // filter() 元素进行筛选，返回一个新数组
+    const newAges = ages.filter((item) => {
+        return item > 18
+    })
+    console.log(newAges)
+
+    // reduce() 求和函数，如填写第二个参数则一起相加
+    const sum = saly.reduce((sum, number) => {
+        return sum + number
+    }, 10)
+    console.log(sum)
+
+    // some() 判断数组是否至少有一个符合条件的元素
+    const some = ages.some((age) => {
+        return age > 18
+    })
+    console.log(some)
+
+    // every() 判断数组是否每一个元素都符合条件
+    const every = ages.every(age => age > 18)
+    console.log(every)
+
+</script>
